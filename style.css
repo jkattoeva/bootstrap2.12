@@ -4,6 +4,76 @@ body {
 * {
   box-sizing: border-box;
 }
+.navbar {
+  padding: 0.75rem 0;
+  background-color: #7952b3;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  justify-content: start;
+  align-items: center;
+  padding: 0 12px;
+}
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 8px;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar ul li a:hover {
+  color: #fff;
+}
+.navbar ul.list li:first-child a {
+  color: #fff;
+  font-weight: 600;
+}
+.navbar .list {
+  flex-grow: 1;
+  padding: 0;
+}
+.navbar .logo {
+  margin-right: 0.5rem;
+}
+.navbar .logo svg {
+  margin-top: 0.25rem;
+  color: #fff;
+}
+.navbar .btn {
+  margin-left: 16px;
+  font-weight: 600;
+  background-color: transparent;
+  border: 1px solid #ffe484;
+  border-radius: .25rem;  
+  padding: .375rem .75rem;
+}
+.navbar .btn a {
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  color: #ffe484;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.navbar .btn:hover {
+  background-color: #ffe484;
+  cursor: pointer;
+}
+.navbar .btn a:hover {
+  color: black;
+}
+.sand {
+  display: none;
+}
 /* .grid-example {
   display: flex;
   flex-wrap: wrap;
@@ -117,5 +187,17 @@ article p {
 @media (max-width: 900px) {
   article p {
     font-size: 1.2rem;
+  }
+}
+@media (max-width: 500px) {
+  .sand {
+    display: inline-block;
+  }
+  .navbar ul,
+  nav button {
+    display: none;
+  }
+  .logo {
+    flex-grow: 1;
   }
 }
